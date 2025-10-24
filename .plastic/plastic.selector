@@ -1,0 +1,4 @@
+repository "Pink_rocket_project(name_in_work)/Pink_rocket_project(name_in_work)@7972509752268@cloud"
+  path "/"
+    br "/main"
+    co "/main"
