@@ -35,7 +35,7 @@ Enemies have a chance to drop useful items, such as:
 
 ---
 
-## 🕹️ Controls (example)
+## 🕹️ Controls
 
 | Action | Key |
 |--------|-----|
