@@ -9,14 +9,10 @@ This game is being developed by three university students using the Unity engine
 
 ## 🎮 Game Features
 
-✅ **Random Enemy Generation**  
-- Every wave is different.  
+✅ **Random Enemy Generation**   
 - Enemies vary in attack patterns  
 - Difficulty scales as the game progresses.
 
-✅ **Boss Fights**  
-- Special enemies with higher health, unique mechanics, and attack patterns.  
-- Defeating a boss rewards extra experience and rare power-ups.
 
 ✅ **Power-Up Drops**  
 Enemies have a chance to drop useful items, such as:
@@ -50,9 +46,7 @@ Enemies have a chance to drop useful items, such as:
 
 - **Engine:** Unity (2D)
 - **Language:** C#
-- **Platform:** PC (with potential to Mobile)
-- Random generation for enemies and stages
-- Customizable wave / boss system
+- **Platform:** PC
 
 ---
 
@@ -63,7 +57,6 @@ Enemies have a chance to drop useful items, such as:
   - Random enemy spawning  
   - Power-up drops  
   - Level & XP system  
-  - Boss encounters  UI polish
   - new enemy types
   - additional arenas
 
