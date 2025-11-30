@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEnigine.SceneManagement;
+using UnityEngine.SceneManagement;
 public class Credits : MonoBehaviour
 {
     public void CreditsMenu()
