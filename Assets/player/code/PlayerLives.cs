@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerLives : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerLives : MonoBehaviour
             if (lives <= 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(3);
+                
 
             }
         }
@@ -63,8 +66,10 @@ public class PlayerLives : MonoBehaviour
             if (lives <= 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(3);
 
             }
         }
     }
+    
 }
