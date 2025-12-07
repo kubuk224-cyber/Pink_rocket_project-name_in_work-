@@ -4,70 +4,51 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLives : MonoBehaviour
 {
-    public int lives = 3;
+   public int lives = 3;
     public Image[] livesUI;
     public GameObject explosionPrefav;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    // Usuwamy OnCollisionEnter2D, bo wrogowie są teraz Triggerami!
+    
+    // Wszystko obsługujemy tutaj
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.gameObject.tag == "Enemy")
+        // Sprawdzamy: Czy to wrogi pocisk LUB czy to sam wróg (statek)
+        if (collision.gameObject.tag == "Enemy Projectile" || collision.gameObject.tag == "Enemy")
         {
-            Destroy(collision.collider.gameObject);
+            // 1. Zniszcz to, co w nas uderzyło (pocisk lub wroga)
+            Destroy(collision.gameObject);
+            
+            // 2. Stwórz efekt wybuchu
             Instantiate(explosionPrefav, transform.position, Quaternion.identity);
+            
+            // 3. Odejmij życie
             lives -= 1;
-            for (int i = 0; i < livesUI.Length; i++)
-            {
-                if (i < lives)
-                {
-                    livesUI[i].enabled = true;
-                }
-                else
-                {
-                    livesUI[i].enabled = false;
-                }
-            }
+            
+            // 4. Aktualizacja UI (serduszek)
+            UpdateLivesUI();
+
+            // 5. Sprawdzenie przegranej
             if (lives <= 0)
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene(3);
-                
-
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy Projectile")
-        {
-            Destroy(collision.gameObject);
-            Instantiate(explosionPrefav, transform.position, Quaternion.identity);
-            lives -= 1;
-            for (int i = 0; i < livesUI.Length; i++)
-            {
-                if (i < lives)
-                {
-                    livesUI[i].enabled = true;
-                }
-                else
-                {
-                    livesUI[i].enabled = false;
-                }
-            }
-            if (lives <= 0)
-            {
-                Destroy(gameObject);
-                SceneManager.LoadScene(3);
 
+    // Wydzieliłem to do osobnej funkcji dla czystości kodu
+    void UpdateLivesUI()
+    {
+        for (int i = 0; i < livesUI.Length; i++)
+        {
+            if (i < lives)
+            {
+                livesUI[i].enabled = true;
+            }
+            else
+            {
+                livesUI[i].enabled = false;
             }
         }
     }
