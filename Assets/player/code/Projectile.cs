@@ -5,13 +5,17 @@ public class Projectile : MonoBehaviour
     public float moveSpeed = 6;
     public GameObject explosionPrefab;
     private PointManager pointManager;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
+        // Upewniamy się, że PointManager istnieje, żeby uniknąć błędów
+        GameObject pm = GameObject.Find("PointManager");
+        if (pm != null)
+        {
+            pointManager = pm.GetComponent<PointManager>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
@@ -21,16 +25,32 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            // --- NOWOŚĆ: Sprawdzamy czy wróg ma coś do upuszczenia ---
+            EnemyLoot loot = collision.gameObject.GetComponent<EnemyLoot>();
+            if (loot != null)
+            {
+                loot.CalculateLoot(); // Wyrzuć przedmiot zanim zginiesz!
+            }
+            // ---------------------------------------------------------
+
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            
+            // Niszczymy wroga
             Destroy(collision.gameObject);
-            pointManager.UpdateScore(100);
+            
+            // Dodajemy punkty (jeśli PointManager istnieje)
+            if (pointManager != null)
+            {
+                pointManager.UpdateScore(100);
+            }
+
+            // Niszczymy pocisk
             Destroy(gameObject);
         }
+
         if(collision.gameObject.tag == "Sciana")
         {
             Destroy(gameObject);
         }
     }
-
-    
 }

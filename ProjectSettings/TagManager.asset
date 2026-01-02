@@ -45,5 +45,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: main
+    uniqueID: 3612124431
+    locked: 0
+  - name: shooting
+    uniqueID: 1820119041
+    locked: 0
   m_RenderingLayers:
   - Default

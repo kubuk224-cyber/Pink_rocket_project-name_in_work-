@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8097825714231386172}
   - component: {fileID: 5692065148789700644}
   - component: {fileID: -2982657582556584624}
+  - component: {fileID: 3555733174907227686}
   m_Layer: 0
   m_Name: enemy-2_0
   m_TagString: Enemy
@@ -77,15 +78,15 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -682842865
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9111840258715114334, guid: b52fc3e25e107f64095b67c0014e5cad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59dd16b514d5b6c46834bdf9cd0a6bed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.23}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,11 +130,29 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46875, y: 0.71875}
-    newSize: {x: 0.15, y: 0.23}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.46875, y: 0.71875}
   m_EdgeRadius: 0
+--- !u!114 &3555733174907227686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387630641573682311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863b018915c435a43b2d61014fbd89da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
+  powerUpPrefabs:
+  - {fileID: 2410230370655744165, guid: 329d136f5d0bafe46b2b424dce0dcaac, type: 3}
+  - {fileID: 3049139392303456626, guid: 199c39629f3087048864caec6625d307, type: 3}
+  - {fileID: 4728544583092027950, guid: c5f95d8a422ba9345a0135438880a8c2, type: 3}
+  - {fileID: 1361324307278137658, guid: 16864d92fcdddf44e984da938ed1fa92, type: 3}
+  dropChance: 25

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b52fc3e25e107f64095b67c0014e5cad
+guid: dbd63526720aeca439fb588b6de14ca4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9111840258715114334
-    second: enemy-2_0
+      213: -6123947090911943709
+    second: Shield_pack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy-2_0
+      name: Shield_pack_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 4
-        width: 15
-        height: 23
+        x: 3
+        y: 0
+        width: 27
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a4ae21bf8d3c8180800000000000000
-      internalID: -9111840258715114334
+      spriteID: 3e328ee119e530ba0800000000000000
+      internalID: -6123947090911943709
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy-2_0: -9111840258715114334
+      Shield_pack_0: -6123947090911943709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
