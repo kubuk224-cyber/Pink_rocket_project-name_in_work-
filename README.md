@@ -1,33 +1,22 @@
 # 🚀 Pink Rocket Project
 
-Pink Rocket Project is an arcade-style space-shooter game inspired by classic titles like *Space Invaders*.  
-Your mission: survive waves of randomly generated enemies, defeat unique boss encounters, collect power-ups, and level up your ship to become unstoppable.
+**Pink Rocket Project** is a final version of our arcade-style space-shooter game, developed by three university students using the Unity engine.
 
-This game is being developed by three university students using the Unity engine.
+Inspired by classics like *Space Invaders*, the game features fast-paced action, retro aesthetics, and dynamic gameplay. Your mission is simple: survive endless waves of enemies and achieve the highest score possible!
 
 ---
 
-## 🎮 Game Features
+## ✨ Key Features
 
-✅ **Random Enemy Generation**   
-- Enemies vary in attack patterns  
-- Difficulty scales as the game progresses.
+✅ **Random Enemy Generation** Each run is unique! Enemies spawn in random waves with varying attack patterns, keeping the gameplay fresh and challenging.
 
+✅ **Pixel Art Graphics** Enjoy a nostalgic, retro visual style with custom-made pixel art sprites and animations.
 
-✅ **Power-Up Drops**  
-Enemies have a chance to drop useful items, such as:
-- Health packs  
-- Damage boosts  
-- Attack speed upgrades  
-- Special abilities / weapons
-
-✅ **Leveling System**  
-- Gain XP by destroying enemies  
-- Level up to increase stats or unlock new skills
-
-✅ **Fast Arcade Gameplay**  
-- Short dynamic runs  
-- Designed so every playthrough feels different
+✅ **Power-Up System** Defeated enemies drop items that can turn the tide of battle:
+* ❤️ **Medkit:** Restores health and repairs your ship.
+* 🛡️ **Shield:** Grants temporary invincibility.
+* ⚡ **Speed Boost:** Increases movement speed for dodging.
+* ☢️ **Nuke:** Instantly destroys all enemies on screen.
 
 ---
 
@@ -35,37 +24,19 @@ Enemies have a chance to drop useful items, such as:
 
 | Action | Key |
 |--------|-----|
-| Move Left / Right | A / D |
-| Shoot | K |
-| Special Ability | Shift |
-| Pause | Esc |
+| **Move Left** | A |
+| **Move Right** | D |
+| **Shoot** | K |
 
 ---
 
 ## 🛠️ Tech & Tools
 
-- **Engine:** Unity (2D)
-- **Language:** C#
-- **Platform:** PC
+* **Engine:** Unity (2D)
+* **Language:** C#
+* **Platform:** PC
+* **Status:** Final Release
 
 ---
 
-## 📌 Current Status
-
-- ✅ Core movement & shooting
-- 🔧 In development: 
-  - Random enemy spawning  
-  - Power-up drops  
-  - Level & XP system  
-  - new enemy types
-  - additional arenas
-
----
-
-## 🚧 Planned Features
-
-- Achievements and score leaderboard  
-- Upgradable weapon tree  
-- More boss variations  
-
----
+*Enjoy the flight!* 🚀
