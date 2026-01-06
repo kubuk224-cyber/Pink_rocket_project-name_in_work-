@@ -18,7 +18,7 @@ public class ProjectileSpawner : MonoBehaviour
         
         if(spawnTimer <= 0)
         {
-            // Zmiana: Wywołujemy funkcję strzelania tylko jeśli są jacyś wrogowie
+            
             if (transform.childCount > 0)
             {
                 SpawnProjectile();

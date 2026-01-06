@@ -6,14 +6,14 @@ public class PowerUp : MonoBehaviour
     
     [Header("Ustawienia")]
     public PowerUpType type;
-    public float fallSpeed = 2f; // Lekko zwiększyłem prędkość, 0.25f to bardzo wolno
+    public float fallSpeed = 2f; 
 
     void Update()
     {
         // Power-up spada w dół
         transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
         
-        // Opcjonalnie: niszcz powerup, gdy spadnie za nisko (poza ekran)
+        // Niszcz powerup, gdy spadnie za nisko (poza ekran)
         if (transform.position.y < -6f) Destroy(gameObject);
     }
 
@@ -44,7 +44,7 @@ public class PowerUp : MonoBehaviour
                         break;
                 }
             }
-            // Efekt dźwiękowy zbierania można dodać tutaj
+            
             Destroy(gameObject);
         }
     }

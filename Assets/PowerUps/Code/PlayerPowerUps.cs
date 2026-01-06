@@ -6,7 +6,7 @@ public class PlayerPowerUps : MonoBehaviour
     [Header("Ustawienia Tarczy")]
     public bool shieldActive = false;
     public float shieldDuration = 5f;
-    // Usunąłem shieldVisuals (GameObject), bo teraz zmieniamy sprite'a gracza
+    
 
     [Header("Ustawienia SpeedBoost")]
     public float normalSpeed = 5f;

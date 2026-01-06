@@ -13,9 +13,9 @@ public class PlayerLives : MonoBehaviour
     public GameObject explosionPrefav;
 
     [Header("Grafiki")]
-    public Sprite shieldSprite;   // <-- TU PRZYPISZ GRAFIKĘ STATKU Z TARCZĄ
+    public Sprite shieldSprite;   
     public Sprite[] damageSprites; 
-    // Element 0 = 1 życie, Element 1 = 2 życia, Element 2 = 3 życia
+    
 
     private SpriteRenderer spriteRenderer;
     private PlayerPowerUps powerUpsScript;
@@ -33,8 +33,7 @@ public class PlayerLives : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy Projectile" || collision.gameObject.tag == "Enemy")
         {
-            // --- 1. OBSŁUGA DROPU (LOOT) ---
-            // Niezależnie czy mamy tarczę czy nie, wróg powinien spróbować wyrzucić przedmiot przed śmiercią
+            // --- 1. LOOT ---
             if (collision.gameObject.tag == "Enemy")
             {
                 EnemyLoot loot = collision.gameObject.GetComponent<EnemyLoot>();
@@ -44,22 +43,22 @@ public class PlayerLives : MonoBehaviour
             // --- 2. OBSŁUGA TARCZY ---
             if (powerUpsScript != null && powerUpsScript.shieldActive)
             {
-                // Masz tarczę? Wróg/Pocisk ginie, ale Ty NIE tracisz życia.
+                
                 Destroy(collision.gameObject); 
                 
-                // (Opcjonalnie) Tu możesz dodać efekt dźwiękowy uderzenia w tarczę
+                
                 Debug.Log("Wróg rozbił się o tarczę!");
                 
-                return; // <--- WAŻNE: Wychodzimy z funkcji, żeby nie odjęło życia poniżej
+                return; 
             }
 
             // --- 3. OBSŁUGA OBRYWANIA (BRAK TARCZY) ---
-            // Jeśli dotarliśmy tutaj, znaczy że nie ma tarczy -> obrywamy.
             
-            Destroy(collision.gameObject); // Wróg ginie
-            Instantiate(explosionPrefav, transform.position, Quaternion.identity); // Wybuch
             
-            lives -= 1; // Tracimy życie
+            Destroy(collision.gameObject); 
+            Instantiate(explosionPrefav, transform.position, Quaternion.identity); 
+            
+            lives -= 1; 
             
             UpdateLivesUI();
             UpdateShipVisuals();
@@ -87,17 +86,17 @@ public class PlayerLives : MonoBehaviour
         }
     }
 
-    // Zmieniłem na PUBLIC, żeby PlayerPowerUps mógł to wywołać
+    
     public void UpdateShipVisuals()
     {
-        // PRIORYTET 1: Jeśli jest tarcza, pokaż grafikę tarczy
+        
         if (powerUpsScript != null && powerUpsScript.shieldActive && shieldSprite != null)
         {
             spriteRenderer.sprite = shieldSprite;
-            return; // Kończymy funkcję, nie sprawdzamy zniszczeń
+            return; 
         }
 
-        // PRIORYTET 2: Jeśli nie ma tarczy, pokaż stan zniszczeń
+        
         if (lives > 0 && damageSprites.Length >= lives)
         {
             spriteRenderer.sprite = damageSprites[lives - 1];

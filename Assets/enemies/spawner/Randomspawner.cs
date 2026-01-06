@@ -21,7 +21,7 @@ public class RandomSpawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= checkInterval) // <- poprawna nazwa zmiennej
+        if (timer >= checkInterval) 
         {
             timer = 0f;
 
@@ -32,13 +32,13 @@ public class RandomSpawner : MonoBehaviour
         }
     }
 
-    // spawn na KAŻDYM punkcie i ustawiamy jako child, żeby łatwo sprawdzać childCount
+    
     void SpawnAllRandom()
     {
         foreach (Transform point in spawnPoints)
         {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            // ustawiamy parent na point, dzięki temu point.childCount będzie > 0 dopóki obiekt istnieje
+            
             Instantiate(enemyPrefabs[randEnemy], point.position, Quaternion.identity, enemyGroupParent);
         }
     }
